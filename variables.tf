@@ -14,9 +14,9 @@ variable "instance_name"{
     default     = "hung4_newbie"
 }
 variable "AWS_ACCESS_KEY_ID"{
-    default = "AKIA4ZL2RF64NVRUCBMX"
+    default = 
 }
 
 variable "AWS_SECRET_ACCESS_KEY"{
-    default = "a0pBJ8Ha3vTMxdIlcRhaYWwlVvd9Zt3nts4ZRBGp"
+    default = 
 }
