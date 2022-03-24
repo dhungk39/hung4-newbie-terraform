@@ -1,7 +1,7 @@
 provision "aws"{
     region = var.region
-    access_key=var.AWS_ACCESS_KEY
-    secret_key=var.AWS_SECRET_KEY
+    access_key=var.AWS_ACCESS_KEY_ID
+    secret_key=var.AWS_SECRET_ACCESS_KEY
 }
 
 data "aws_ami" "ubuntu" {
@@ -21,7 +21,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "ubuntu"{
-    ami
+    ami           = data.aws_ami.ubuntu.id
     instance_type = var.instance_type
 
     tags = {
