@@ -19,4 +19,7 @@ variable "AWS_ACCESS_KEY_ID"{
 
 variable "AWS_SECRET_ACCESS_KEY"{
     default = "a0pBJ8Ha3vTMxdIlcRhaYWwlVvd9Zt3nts4ZRBGp"
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 40b591ae415dea4c152f2f04c35113aa87fb0f7b
