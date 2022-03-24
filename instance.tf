@@ -7,7 +7,7 @@ data "aws_ami" "ubuntu" {
 
     filter {
         name   = "name"
-        values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+        values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
     }
 
     filter {
@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "ubuntu"{
-    ami = data.aw.ubuntu.id
+    ami = data.aws.ubuntu.id
     instance_type = var.instance_type
 
     tags = {
