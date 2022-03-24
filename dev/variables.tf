@@ -13,3 +13,9 @@ variable "instance_name"{
     description = "EC2 instance name"
     default     = "hung4_newbie"
 }
+variable "AWS_ACCESS_KEY_ID"{
+    default = "AKIA4ZL2RF64NVRUCBMX"
+}
+
+variable "AWS_SECRET_ACCESS_KEY"{
+    default = "a0pBJ8Ha3vTMxdIlcRhaYWwlVvd9Zt3nts4ZRBGp"
