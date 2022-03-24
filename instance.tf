@@ -5,12 +5,12 @@ provider "aws"{
 data "aws_ami" "ubuntu" {
     most_recent = true
 # take type ISO
-    filter{
+    filter {
         name = "name"
         value = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
     }
 # type virtualization
-    filter{
+    filter {
         name = "virtualization-type"
         values = ["hvm"]
     }
@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "ubuntu"{
-    ami           = data.aw.ubuntu.id
+    ami = data.aw.ubuntu.id
     instance_type = var.instance_type
 
     tags = {
