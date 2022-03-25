@@ -22,7 +22,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "ubuntu" {
   ami           = ami-0f561e14031ed52d3
-  instance_type = var.instance_type
+  instance_type = "t2.micro"
 
   tags = {
     Name                 = var.instance_name
