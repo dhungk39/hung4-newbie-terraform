@@ -2,8 +2,6 @@
 variable "region"{
     description = "AWS region"
     default     = "us-east-1" 
-    access_key=var.AWS_ACCESS_KEY_ID
-    secret_key=var.AWS_SECRET_ACCESS_KEY
 }
 #instance type t2.micro
 variable "instance_type" {
