@@ -9,7 +9,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
   }
 
   filter {
@@ -22,10 +22,10 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "ubuntu" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
 
   tags = {
     Name                 = var.instance_name
-    "Linux Distribution" = "Ubuntu"
+    "Linux Distribution" = "Ubuntu 18.04"
   }
 }
